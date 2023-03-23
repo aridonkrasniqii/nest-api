@@ -1,0 +1,75 @@
+### Create User EndPoint 
+
+POST http://localhost:3000/auth/signup 
+content-type: application/json
+
+{
+  "email": "krasniqi@gmail.com", 
+  "password": "aridon123"
+}
+
+
+### Find all users 
+GET http://localhost:3000/auth
+ 
+
+### Find a particular user with a given ID 
+GET http://localhost:3000/auth/1
+
+
+
+### Find all users with a given email 
+
+GET http://localhost:3000/auth?email=aridon@gmail.com
+
+
+
+### Delete a user given id 
+
+DELETE http://localhost:3000/auth/3
+
+
+### Update a user 
+
+PATCH http://localhost:3000/auth/4
+content-type: application/json 
+
+{
+  "email":"aridon12@example.com"
+}
+
+
+### Sign In 
+
+POST http://localhost:3000/auth/signin 
+content-type: application/json
+
+{ 
+  "email":"krasniqi@gmail.com", 
+  "password": "aridon123"
+} 
+
+
+
+# Just an example 
+# ### Set a color 
+
+# GET http://localhost:3000/auth/colors/red 
+
+
+# ### Get the color 
+
+# GET http://localhost:3000/auth/colors
+
+
+
+
+### Get the current user 
+
+GET http://localhost:3000/auth/whoami
+
+
+
+### Signout the user 
+
+POST http://localhost:3000/auth/signout
